@@ -1,37 +1,137 @@
-# DineHub – Full-Stack Multi-Restaurant Table Booking Platform
+# 🍽️ DineHub – Full-Stack Restaurant Table Booking Platform
 
-DineHub is a full-stack restaurant discovery and table-booking MVP built with React, Express, Node.js and MongoDB.
+DineHub is a full-stack multi-restaurant table booking platform that allows users to discover restaurants, search for restaurants, view restaurant details, check available tables, and make table reservations online.
 
-## Features
-- Restaurant listing and search
-- Restaurant detail page
-- Table availability and booking
-- User registration/login with JWT
-- My Bookings page
-- Admin dashboard for restaurants and bookings
-- Responsive modern UI
-- MongoDB models and REST APIs
+The platform also provides an admin dashboard where administrators can manage restaurants and monitor recent bookings.
 
-## Run locally
-### 1. Server
-```bash
-cd server
-npm install
-copy .env.example .env
-npm run dev
-```
-Set `MONGO_URI` in `.env`. If MongoDB is unavailable, the server runs with an in-memory demo dataset so the UI can still be tested.
+---
 
-### 2. Client
-```bash
-cd client
-npm install
-npm run dev
-```
-Open http://localhost:5173
+## 📌 Project Overview
 
-Demo admin login: `admin@dinehub.com` / `admin123`
+DineHub is designed to simplify the restaurant reservation process by providing a centralized platform for discovering restaurants and booking tables online.
 
-## Project structure
-- `client` – React + Vite frontend
-- `server` – Express REST API, JWT auth and MongoDB models
+Instead of contacting restaurants manually or waiting for confirmation, users can browse available restaurants, select a preferred date and time, choose a table, and create a reservation through the platform.
+
+The project demonstrates the implementation of a modern full-stack web application using React, Node.js, Express.js, and MongoDB.
+
+---
+
+## 🎯 Objectives
+
+The main objectives of DineHub are:
+
+- To provide an easy-to-use restaurant discovery platform.
+- To allow users to search for restaurants.
+- To display restaurant information and available tables.
+- To provide an online table reservation system.
+- To implement secure user authentication.
+- To allow users to view their bookings.
+- To provide an admin dashboard for restaurant management.
+- To allow administrators to monitor recent bookings.
+- To build a responsive and user-friendly web interface.
+- To demonstrate full-stack development using REST APIs.
+
+---
+
+## ✨ Features
+
+### 👤 User Features
+
+- User registration
+- User login and authentication
+- Restaurant listing
+- Restaurant search
+- Restaurant details
+- Table availability
+- Date and time selection
+- Online table booking
+- Booking confirmation
+- My Bookings section
+- Responsive user interface
+- Logout functionality
+
+### 👨‍💼 Admin Features
+
+- Admin authentication
+- Admin dashboard
+- Restaurant management
+- Add new restaurant
+- View restaurant information
+- Monitor recent bookings
+- Booking overview
+- Dashboard statistics
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+
+### Backend
+
+- Node.js
+- Express.js
+- REST API
+- JWT Authentication
+
+### Database
+
+- MongoDB
+- Mongoose
+
+### Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- Postman
+- npm
+- Chrome Developer Tools
+
+### Deployment
+
+- Vercel – Frontend
+- Render – Backend
+- MongoDB Atlas – Database
+
+---
+
+## 🏗️ Project Architecture
+
+DineHub follows a client-server architecture.
+
+```text
+                    ┌─────────────────────┐
+                    │       User          │
+                    │   Web Browser       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ React.js Frontend   │
+                    │       Vite          │
+                    └──────────┬──────────┘
+                               │
+                         REST API Calls
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Node.js + Express   │
+                    │      Backend        │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      MongoDB        │
+                    │      Database       │
+                    └─────────────────────┘
+
+
+                    
