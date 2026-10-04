@@ -1,5 +1,5 @@
 import React,{useState,useEffect,createContext,useContext} from 'react';import{createRoot}from'react-dom/client';import{BrowserRouter,useNavigate,useParams,Link,Routes,Route}from'react-router-dom';import'./styles.css';
-const API='/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 const AuthContext=createContext();
 function useAuth(){return useContext(AuthContext)}
 function AuthProvider({children}){const [auth,setAuth]=useState(()=>JSON.parse(localStorage.getItem('dinehub_auth')||'null'));const login=x=>{localStorage.setItem('dinehub_auth',JSON.stringify(x));setAuth(x)};const logout=()=>{localStorage.removeItem('dinehub_auth');setAuth(null)};return <AuthContext.Provider value={{auth,login,logout}}>{children}</AuthContext.Provider>}
